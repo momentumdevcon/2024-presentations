@@ -8,12 +8,12 @@ Pradeep Chintale &mdash; _SEI Investment Company, Sr. Cloud Solution Engineer_
 
 - [LinkedIn](https://www.linkedin.com/in/pradeepchintale/)
 
-## Bio
+## Bio &mdash; Madhavi Najana
 
 Madhavi Najana is a Software Engineering Manager at Federal Home Loan Bank of Cincinnati, USA, with over 18 years of experience in Software engineering. Throughout her career, Madhavi have been at the forefront of technological innovation, actively engaging with and implementing the latest advancements. She is a seasoned Software Engineering Leader who has successfully developed and architected applications in various domains and technologies. Her professional journey has afforded an opportunity to work with a diverse range of cutting-edge technologies – Software Engineering, Cloud computing, AI/ML, Identity and Access Management, Agile, Scaled Agile, DevOps, IT strategy, and Fintech. She brings a depth of knowledge and expertise in various cutting-edge technologies, processes, and best practices. Madhavi provides substantial contributions to society through technological innovation and inspire women to take up STEM. Her contributions to technology in various roles, from serving on panels like the DC: AI Summit – Generative AI & Finance, Strategic AI Advisory Board member for Ashland University, Women in AI – Ohio State Ambassador, Cincy AI Week – Host Committee member, Society of Women Engineers - SWE Next Awards Judge, Ohio Academy of Science, USA - Ohio State Science Day Judge, shows her long-standing commitment to pushing technological boundaries. Madhavi’s dedication earned her the IEEE Senior Membership, Society of Women Engineers – Senior Membership. Beyond her professional work, Madhavi has research papers published in emerging technologies like Artificial Intelligence, Machine Learning, Blockchain, Cybersecurity, Software Engineering and Fintech showcasing her thought leadership in these domains.
 Madhavi holds MBA from Xavier University - USA, Master of Technology in Computer Science and Engineering, Master of Computer Applications, Bachelor of Science in Computer Science from Acharya Nagarjuna University, India. She earned various certifications in Microsoft Azure AI, Data Science, Security, Compliance & Identity, OKTA, Scaled Agile, Agile Scrum, Six Sigma, Change Management, and Leadership.
 
-## Bio
+## Bio &mdash; Pradeep Chintale
 
 Pradeep Chintale, a Lead Cloud Engineer at SEI Investment Company, has over 18 years of experience and a bachelor's degree in Computer Science from Mumbai University. He specializes in Cloud and DevOps architecture, excelling in automated CI/CD pipeline processes. A certified Cloud Solution Professional Architect, he previously served as a Senior Cloud Solution Architect at Microsoft
 
