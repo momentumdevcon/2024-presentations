@@ -3,7 +3,7 @@
 Peter van Vliet &mdash; *Co-Founder and Lead Architect @ Masking Technology*
 
 - [LinkedIn](https://www.linkedin.com/in/petervvliet/)
-- [Website](https://medium.com/@peter_masking)
+- [Website](https://masking.tech)
 
 ## Bio
 
