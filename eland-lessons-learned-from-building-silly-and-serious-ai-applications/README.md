@@ -1,6 +1,9 @@
 # Lessons learned from building Silly and Serious AI Applications
 
-Matt Eland &mdash; AI Specialist & Wizard at Leading EDJE
+Matt Eland &mdash; _AI Specialist & Wizard at Leading EDJE_
+
+- [LinkedIn](https://www.linkedin.com/in/matteland/)
+- [Website](https://matteland.dev/)
 
 ## Bio
 
