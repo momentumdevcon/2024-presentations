@@ -1,0 +1,99 @@
+version: "3.8"
+services:
+
+  client:
+    build:
+      context: ./Client
+      dockerfile: ../Dockerfile # installs OpenTelemetry .NET Automatic Instrumentation
+    volumes:
+      - ./log/client:/log/otel
+    entrypoint: "./out/Examples.Client http://service:5000"
+    env_file:
+      - otel-dotnet.env # enables OpenTelemetry .NET Automatic Instrumentation
+    environment:
+      # OpenTelemetry environmental variables:
+      OTEL_SERVICE_NAME: "client"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector:4318"
+      OTEL_LOG_LEVEL: debug
+      OTEL_DOTNET_AUTO_LOG_DIRECTORY: /log/otel
+    depends_on:
+      - service
+      - otel-collector
+
+  service:
+    build:
+      context: ./Service
+      dockerfile: ../Dockerfile # installs OpenTelemetry .NET Automatic Instrumentation
+    volumes:
+      - ./log/service:/log/otel
+    entrypoint: "./out/Examples.Service --urls http://*:5000"
+    env_file:
+      - otel-dotnet.env # enable OpenTelemetry .NET Automatic Instrumentation
+    environment:
+      DB_CONNECTION: "Server=sqlserver,1433;User=sa;Password=yourStrong(!)Password;TrustServerCertificate=True;"
+      # OpenTelemetry environmental variables:
+      OTEL_SERVICE_NAME: "service"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector:4318"
+      OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES: "Examples.Service"
+      OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES: "Examples.Service"
+      OTEL_LOG_LEVEL: debug
+      OTEL_DOTNET_AUTO_LOG_DIRECTORY: /log/otel
+    depends_on:
+      - sqlserver
+      - otel-collector
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-CU17-ubuntu-20.04
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+    ports:
+      - "1433:1433"
+
+  # OpenTelemetry Collector
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.104.0
+    volumes:
+      - ./otel-config.yaml:/etc/otel/config.yaml
+      - ./log/collector:/log/otel
+    command: --config /etc/otel/config.yaml
+    environment:
+      JAEGER_ENDPOINT: "jaeger:4317"
+      LOKI_ENDPOINT: "http://loki:3100/loki/api/v1/push"
+    ports:
+      - "8889:8889"   # Prometheus metrics exporter (scrape endpoint)
+      - "13133:13133" # health_check extension
+      - "55679:55679" # ZPages extension
+    depends_on:
+      - jaeger
+      - prometheus
+      - loki
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.50.0
+    ports:
+      - "16686:16686" # Jaeger Web UI
+
+  prometheus:
+    image: prom/prometheus:v2.42.0
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  loki:
+    image: grafana/loki:2.7.4
+    ports:
+      - "3100:3100"
+
+  grafana:
+    image: grafana/grafana:9.4.3
+    volumes:
+      - ./grafana/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+      - ./grafana/dashboard-provider.yml:/etc/grafana/provisioning/dashboards/main.yml
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: "Admin"
+    ports:
+      - "3000:3000"
