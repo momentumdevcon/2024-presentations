@@ -1,0 +1,73 @@
+extensions:
+  health_check:
+  zpages:
+    endpoint: :55679
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+        endpoint: "0.0.0.0:4318"
+  zipkin:
+  sqlserver:
+    collection_interval: 15s
+    username: sa
+    password: yourStrong(!)Password
+    server: sqlserver
+    port: 1433
+
+processors:
+  batch:
+
+exporters:
+  debug:
+    # verbosity: detailed
+  file/traces:
+    path: /log/otel/traces.log
+  file/metrics:
+    path: /log/otel/metrics.log
+  file/logs:
+    path: /log/otel/logs.log
+  otlp:
+    endpoint: "${JAEGER_ENDPOINT}"
+    tls:
+      insecure: true
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  loki:
+    endpoint: "${LOKI_ENDPOINT}"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers:
+        - otlp
+        - zipkin
+      processors: [batch]
+      exporters:
+        - debug
+        - file/traces
+        - otlp
+    metrics:
+      receivers:
+        - otlp
+        - sqlserver
+      processors: [batch]
+      exporters:
+        - debug
+        - file/metrics
+        - prometheus
+    logs:
+      receivers:
+        - otlp
+      processors: [batch]
+      exporters:
+        - debug
+        - file/logs
+        - loki
+  extensions:
+    - health_check
+    - zpages
