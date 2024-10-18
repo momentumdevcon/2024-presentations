@@ -4,7 +4,6 @@
 
 - [Accessibility Testing with Screen Readers & More](./duvall-accessibility-testing-with-screen-readers-more) &mdash; Erissa Duvall
 - [Asynchronous JavaScript: Livin' On A Prayer](./fornal-asynchronous-java-script-livin-on-a-prayer) &mdash; Bob Fornal
-- [Avoidifying Over-Complexification: Rooting Out Over-Engineering in Your Projects](./tower-avoidifying-over-complexification-rooting-out-over-engineering-in-your-projects) &mdash; Jonathan "J." Tower
 - [Beyond the Offer: A Beginners Guide to Career Progression in Tech](./taj-beyond-the-offer-a-beginners-guide-to-career-progression-in-tech) &mdash; Fatima Taj
 - [Code to Clarity: Communicating Technical Concepts to a Non-Technical Audience](./marquetti-ali-code-to-clarity-communicating-technical-concepts-to-a-non-technical-audience) &mdash; Elena Marquetti-Ali
 - [Configurable cloud-native applications with .NET Aspire](./mc-keiver-configurable-cloud-native-applications-with-net-aspire) &mdash; Brian McKeiver
@@ -13,13 +12,13 @@
 - [Do you know what your systems are doing?](./eckhart-do-you-know-what-your-systems-are-doing) &mdash; Kyle Eckhart
 - [Dockerfile optimization: Speed & Size](./alioto-dockerfile-optimization-speed-size) &mdash; Matthew Alioto
 - [Effective React State: 10 Years of Lessons Learned](./house-effective-react-state-10-years-of-lessons-learned) &mdash; Cory House
-- [End-to-End Testing in the Age of Containers](./mc-allister-end-to-end-testing-in-the-age-of-containers) &mdash; Scott McAllister
 - [Exposing the Interview Process](./desseyn-exposing-the-interview-process) &mdash; Taylor Desseyn
 - [Finding Bigfoot with JavaScript + Vector Search](./royse-finding-bigfoot-with-java-script-vector-search) &mdash; Guy Royse
 - [Fresh Hot CSS Features!](./riviere-fresh-hot-css-features) &mdash; Alex Riviere
-- [Future Directions in FinTech Fraud Prevention: Insights from Generative AI Innovations](./najana-chintale-future-directions-in-fin-tech-fraud-prevention-insights-from-generative-ai-innovations) &mdash; Madhavi Najana & Pradeep Chintale
+- [Future Directions in FinTech Fraud Prevention: Insights from Generative AI Innovations](./najana-chintale-future-directions-in-fin-tech-fraud-prevention-insights-from-generative-ai-innovations) &mdash; Madhavi Najana
 - [How To Get Started With AI: Moving Beyond ChatGPT](./thayer-how-to-get-started-with-ai-moving-beyond-chat-gpt) &mdash; Jordan Thayer
 - [JavaScript Framework Cage Match](./dutton-java-script-framework-cage-match) &mdash; Amy Dutton
+- [Lessons learned from building Silly and Serious AI Applications](./eland-lessons-learned-from-building-silly-and-serious-ai-applications) &mdash; Matt Eland
 - [Messaging With Limits: Concurrent, Multi-Stage Data Processing in the Real World](./meeker-messaging-with-limits-concurrent-multi-stage-data-processing-in-the-real-world) &mdash; Brian Meeker
 - [Microservice Trench Warfare - Taming the Beast you Created](./murphy-microservice-trench-warfare-taming-the-beast-you-created) &mdash; Heath Murphy
 - [Minimum Viable Replacement: What I learned from burning through $20M of FedEx's money](./mireles-minimum-viable-replacement-what-i-learned-from-burning-through-20-m-of-fed-exs-money) &mdash; Kevin Mireles
