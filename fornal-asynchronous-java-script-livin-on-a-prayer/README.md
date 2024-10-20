@@ -26,4 +26,11 @@ This discussion will examine the ways that JavaScript coordinates and manages ev
 
 - **Level**: Introductory and overview
 - **Tags**: Front-End &  Web
-  
+
+## Presentation
+
+This is a "live-code" presentation. As such, it is a repository of code that couldn't be ported here well.
+
+Here is the link to the repository with the presentation, as is.
+
+- [PRESENTATION](https://github.com/bob-fornal/tears)
