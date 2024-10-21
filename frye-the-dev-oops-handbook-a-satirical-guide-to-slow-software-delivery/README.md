@@ -25,4 +25,7 @@ Or not. While this talk is tongue in cheek, we will see how to overcome these al
 
 - **Level**: Intermediate
 - **Tags**: Cloud & Infrastructure, Patterns & Practices, DevOps
-  
+
+## Links
+
+- [Slide deck](Slides.pdf)
